@@ -13,7 +13,7 @@ class PegawaiItem extends StatelessWidget {
       child: Card(
         child: ListTile(
           title: Text(pegawai.nama),
-          subtitle: Text("${pegawai.nip}"),
+          subtitle: Text(pegawai.nip),
         ),
       ),
       onTap: () {

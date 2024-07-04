@@ -31,26 +31,29 @@ class _PegawaiPageState extends State<PegawaiPage> {
         children: [
           PegawaiItem(
               pegawai: Pegawai(
+                  id: 1,
                   nama: "Veneno Roadster",
-                  nip: 12120908,
+                  nip: "12120908",
                   tanggal_lahir: "2013-03-07",
-                  nomor_telepon: 0816362712,
-                  email: "veneno62@gmail.com",
+                  nomor_telepon: "0816362712",
+                  email: "veneno63@gmail.com",
                   password: "supafast63")),
           PegawaiItem(
               pegawai: Pegawai(
+                  id: 2,
                   nama: "Aventador SVJ",
-                  nip: 12120907,
+                  nip: '12120907',
                   tanggal_lahir: "2019-04-05",
-                  nomor_telepon: 0877065712,
+                  nomor_telepon: "0877065712",
                   email: "aventsvj@gmail.com",
                   password: "gintanisvj63")),
           PegawaiItem(
               pegawai: Pegawai(
+                  id: 3,
                   nama: "Huracan STO",
-                  nip: 12120906,
+                  nip: "12120906",
                   tanggal_lahir: "2021-06-09",
-                  nomor_telepon: 0864052710,
+                  nomor_telepon: "0864052710",
                   email: "supertrofeo@gmail.com",
                   password: "sto52v10")),
         ],

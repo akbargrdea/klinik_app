@@ -1,12 +1,14 @@
 class Pegawai {
+  int id;
   String nama;
-  int nip;
+  String nip;
   String tanggal_lahir;
-  int nomor_telepon;
+  String nomor_telepon;
   String email;
   String password;
 
   Pegawai({
+    required this.id,
     required this.nama,
     required this.nip,
     required this.tanggal_lahir,
