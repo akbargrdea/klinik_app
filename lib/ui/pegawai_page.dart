@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:klinik_app/model/pegawai.dart';
 import 'pegawai_item.dart';
 import 'pegawai_form.dart';
+import '../widget/sidebar.dart';
 
 class PegawaiPage extends StatefulWidget {
   const PegawaiPage({super.key});
@@ -14,6 +15,7 @@ class _PegawaiPageState extends State<PegawaiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Sidebar(),
       appBar: AppBar(
         title: const Text("Data Pegawai"),
         backgroundColor: Colors.blue,

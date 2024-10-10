@@ -1,48 +1,48 @@
 import 'package:flutter/material.dart';
-import '../model/pegawai.dart';
-import 'pegawai_update_form.dart';
-import 'pegawai_page.dart';
+import '../model/Pasien.dart';
+import 'pasien_update_form.dart';
+import 'pasien_page.dart';
 
-class PegawaiDetail extends StatefulWidget {
-  final Pegawai pegawai;
+class PasienDetail extends StatefulWidget {
+  final Pasien pasien;
 
-  const PegawaiDetail({super.key, required this.pegawai});
+  const PasienDetail({super.key, required this.pasien});
 
   @override
-  State<PegawaiDetail> createState() => _PegawaiDetailState();
+  State<PasienDetail> createState() => _PasienDetailState();
 }
 
-class _PegawaiDetailState extends State<PegawaiDetail> {
+class _PasienDetailState extends State<PasienDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            title: const Text("Detail Pegawai"), backgroundColor: Colors.blue),
+            title: const Text("Detail Pasien"), backgroundColor: Colors.blue),
         body: ListView(
           children: [
             const SizedBox(height: 20),
             ListTile(
-                title: Text("ID : ${widget.pegawai.id}",
+                title: Text("ID : ${widget.pasien.id}",
                     style: const TextStyle(fontSize: 20))),
             ListTile(
-                title: Text("Nama Pegawai : ${widget.pegawai.nama}",
+                title: Text("Nama Pasien : ${widget.pasien.nama}",
                     style: const TextStyle(fontSize: 20))),
             ListTile(
-                title: Text("NIP Pegawai : ${widget.pegawai.nip}",
-                    style: const TextStyle(fontSize: 20))),
-            ListTile(
-                title: Text(
-                    "Tanggal Lahir Pegawai : ${widget.pegawai.tanggal_lahir}",
+                title: Text("NIP Pasien : ${widget.pasien.nip}",
                     style: const TextStyle(fontSize: 20))),
             ListTile(
                 title: Text(
-                    "Nomor Telepon Pegawai : ${widget.pegawai.nomor_telepon}",
+                    "Tanggal Lahir Pasien : ${widget.pasien.tanggal_lahir}",
                     style: const TextStyle(fontSize: 20))),
             ListTile(
-                title: Text("Email Pegawai : ${widget.pegawai.email}",
+                title: Text(
+                    "Nomor Telepon Pasien : ${widget.pasien.nomor_telepon}",
                     style: const TextStyle(fontSize: 20))),
             ListTile(
-                title: Text("Password Pegawai : ${widget.pegawai.password}",
+                title: Text("Email Pasien : ${widget.pasien.email}",
+                    style: const TextStyle(fontSize: 20))),
+            ListTile(
+                title: Text("Password Pasien : ${widget.pasien.password}",
                     style: const TextStyle(fontSize: 20))),
             const SizedBox(height: 20),
             Row(
@@ -63,7 +63,7 @@ class _PegawaiDetailState extends State<PegawaiDetail> {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      PegawaiUpdateForm(pegawai: widget.pegawai)));
+                      PasienUpdateForm(pasien: widget.pasien)));
         },
         style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
         child: const Text("Ubah"));
@@ -80,7 +80,7 @@ class _PegawaiDetailState extends State<PegawaiDetail> {
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => const PegawaiPage()));
+                      MaterialPageRoute(builder: (context) => const PasienPage()));
                 },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                 child: const Text("YA"),

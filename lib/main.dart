@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'ui/pegawai_page.dart';
+import 'ui/beranda.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Data Pegawai',
       debugShowCheckedModeBanner: false,
-      home: PegawaiPage(),
+      home: Beranda(),
     );
   }
 }
